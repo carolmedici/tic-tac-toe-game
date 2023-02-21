@@ -1,0 +1,143 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;700&family=Space+Grotesk&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    
+}
+
+:root{
+    /*color*/
+    --back-color: rgb(21, 27, 42);
+    --space-back-color: rgb(44, 57, 90);
+    --text-color: rgb(162, 162, 162);
+    --main-color: rgb(67, 80, 111);;
+
+
+    /*fonts*/
+    --font-titule: 'Prompt', sans-serif;
+    --font-text: 'Space Grotesk', sans-serif;
+
+
+    /*accessibility*/
+    font-size: 62.5%;
+}
+
+body{
+    background-color: var(--back-color);
+    color: white;
+    text-shadow: 1px 1px 1px black;
+}
+
+main{
+    background-color: var(--main-color);
+    width: 100rem;
+    margin: auto;
+    margin-top: 5rem;
+    height: 70rem;
+    border-radius: 1rem;
+    
+}
+
+h1{
+    font-family: var(--font-titule);
+    font-size: 4rem;
+    padding: 1rem;
+    text-align: center;
+
+}
+
+h2{
+    font-size: 2.5rem;
+    position: relative;
+    left: 5rem;
+    padding-bottom: 1rem;
+
+}
+p{
+    font-size: 1.7rem;
+    font-family: var(--font-text);
+    width: 90rem;
+    margin: auto;
+}
+
+
+.changeT {
+text-align: right;
+position: relative;
+bottom: 26rem;
+left: 28rem;
+}
+
+h3{
+    text-align: center;
+    font-family: var(--font-titule);
+    font-size: 1.7rem;
+}
+
+input{
+
+}
+
+#game{
+    width: 20rem;
+    height: 20rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    position: relative;
+    right: 7%;
+    margin: auto;
+
+  
+}
+
+.space{
+    width: 10rem;
+    height: 10rem;
+    background-color: var(--space-back-color);
+    margin-left: 1rem;
+    margin-top: 1rem;
+    border-radius: 1rem;
+   
+}
+
+#space1{
+   grid-column-start: 1;
+   grid-row-start: 1;
+}
+
+#space2{
+    grid-column-start: 2;
+    grid-row-start: 1;
+}
+#space3{
+    grid-column-start: 3;
+    grid-row-start: 1;
+}
+#space4{
+    grid-column-start: 1;
+    grid-row-start: 2;
+}
+#space5{
+    grid-column-start: 2;
+    grid-row-start: 2;
+}
+#space6{
+    grid-column-start: 3;
+    grid-row-start: 2;
+}
+#space7{
+    grid-column-start: 1;
+    grid-row-start: 3;
+}
+#space8{
+    grid-column-start: 2;
+    grid-row-start: 3;
+}
+#space9{
+    grid-column-start: 3;
+    grid-row-start: 3;
+}

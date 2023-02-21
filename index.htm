@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac toe</title>
+
+
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+
+
+
+</head>
+
+<body>
+    <main>
+        <h1>Tic Tac Toe</h1>
+        <h2>Rules</h2>
+        <p><strong>1.</strong>  The game is played on a grid of 3 x 3 squares. <br>
+        <strong>2.</strong>  You are X, your friend (or the computer) is O. Players take turns placing their marks on empty squares. <br>
+        <strong>3.</strong> The player who manages to form a line with three identical symbols first, whether horizontally, vertically or diagonally, wins. <br>
+        <strong>4.</strong> If at the end of the game all squares are filled and no player has 3 marks in a row, it is a tie.</p>
+        <p class="changeT">Choose a different theme:</p>
+        <label id="change" class="change">
+            <input type="checkbox" onchange="changeTheme()" id="switch">
+            <span class="slider"></span>
+        </label>
+        <h3>Let's play!</h3>
+        <div id="game">
+            <div id="line">
+                <div class="space" id="space1"></div>
+                <div class="space" id="space2"></div>
+                <div class="space" id="space3"></div>
+            </div>
+            <div id="line">
+                <div class="space" id="space4"></div>
+                <div class="space" id="space5"></div>
+                <div class="space" id="space6"></div>
+            </div>
+            <div id="line">
+                <div class="space" id="space7"></div>
+                <div class="space" id="space8"></div>
+                <div class="space" id="space9"></div>
+            </div>
+             <div id="result"></div>
+             <div class="scoreboard" id="win">You win: </div>
+             <div class="scoreboard" id="tie">A tie:</div>
+             <div class="scoreboard" id="loose">You loose: </div>
+        
+        </div>
+    </main>
+</body>
+</html>
