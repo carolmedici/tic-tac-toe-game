@@ -8,10 +8,7 @@
 
 
     <link rel="stylesheet" href="/assets/css/style.css">
-    <script
-  src="https://code.jquery.com/jquery-3.6.3.js"
-  integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
-  crossorigin="anonymous"></script>
+    
     <script type="text/javascript" src="/assets/javascript/script.js"></script>
 
 
@@ -21,37 +18,53 @@
 <body>
     <main>
         <h1>Tic Tac Toe</h1>
-        <h2>Rules</h2>
-        <p><strong>1.</strong>  The game is played on a grid of 3 x 3 squares. <br>
-        <strong>2.</strong>  You are X, your friend (or the computer) is O. Players take turns placing their marks on empty squares. <br>
-        <strong>3.</strong> The player who manages to form a line with three identical symbols first, whether horizontally, vertically or diagonally, wins. <br>
-        <strong>4.</strong> If at the end of the game all squares are filled and no player has 3 marks in a row, it is a tie.</p>
-        <p class="changeT">Choose a different theme:</p>
-        <label id="change" class="change">
-            <input type="checkbox" onchange="changeTheme()" id="switch">
-            <span class="slider"></span>
-        </label>
-        <div id="play">Let's Play</div>
+        <div id="rules">
+            <h2>Rules</h2>
+            <p><strong>1.</strong>  The game is played on a grid of 3 x 3 squares. <br><br>
+            <strong>2.</strong>  You are X, your friend (or the computer) is O. Players take turns placing their marks on empty squares. <br><br>
+            <strong>3.</strong> The player who manages to form a line with three identical symbols first, whether horizontally, vertically or diagonally, wins. <br><br>
+            <strong>4.</strong> If at the end of the game all squares are filled and no player has 3 marks in a row, it is a tie.</p>
+            <div id="play">Let's Play</div>
+        </div>
+
+        <div>
+            <p class="changeT">Choose a different theme:</p>
+            <label id="change" class="change">
+                <input type="checkbox" onchange="changeTheme()" id="switch">
+                <span class="slider"></span>
+            </label>
+        </div>
+
+    
+
+       
+    <div id="playerturn" onload="updatePlayerTurn()">
+        <p>Player's turn:</p> 
+        <img src="" height="8rem">
+    </div>
+
         <div id="game">
             <div id="line">
-                <div class="space" data-index="space1"></div>
-                <div class="space" data-index="space2"></div>
-                <div class="space" data-index="space3"></div>
+                <div class="space" id="space1" move=""></div>
+                <div class="space" id="space2" move=""></div>
+                <div class="space" id="space3" move=""></div>
             </div>
             <div id="line">
-                <div class="space" data-index="space4"></div>
-                <div class="space" data-index="space5"></div>
-                <div class="space" data-index="space6"></div>
+                <div class="space" id="space4" move=""></div>
+                <div class="space" id="space5" move=""></div>
+                <div class="space" id="space6" move=""></div>
             </div>
             <div id="line">
-                <div class="space" data-index="space7"></div>
-                <div class="space" data-index="space8"></div>
-                <div class="space" data-index="space9"></div>
+                <div class="space" id="space7" move=""></div>
+                <div class="space" id="space8" move=""></div>
+                <div class="space" id="space9" move=""></div>
             </div>
-             <div id="result"></div>
+             <div id="result">
              <div class="scoreboard" id="win">You win: </div>
              <div class="scoreboard" id="tie">A tie:</div>
-             <div class="scoreboard" id="loose">You loose: </div>
+             <div class="scoreboard" id="loose">You loose: 
+                </div>
+             </div>
         
 
             

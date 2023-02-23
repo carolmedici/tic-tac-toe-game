@@ -1,28 +1,27 @@
-const spaces = document.querySelectorAll('.space');
-const playTxt = document.querySelector("#play");
-const btnRestart = document.querySelector("#restart")
-let x = "<img src=assets/images/x.png>"
-let o = "<img src=assets/images/ogreen.png>"
+const player1 = "X";
+const player2 = "O";
+var playTime = player2; 
+const gameOver = false; 
 
-const win=[
-    [0,1,2],
-    [4,5,6],
-    [7,8,9],
-    [1,4,7],
-    [2,5,8],
-    [3,6,9],
-    [1,5,9],
-    [3,5,7]
+updatePlayerTurn()
 
-];
+function updatePlayerTurn(){
+    if (gameOver) {return;} 
 
-let options = ["","","","","","","","",""]
-let currentPlayer = x
-let player ="X"
-let running = false
-init();
+    if (playTime == player1) { 
 
-function init() {
-    spaces.forEach(space=>space.addEventListener('click, spaceClick'));
-    btnRestart.addEventListener ('click', restartGame)
+        var player = document.querySelectorAll("div#playerturn img")[0];
+        player.setAttribute("src", "/assets/images/x.png") 
+    } else{
+        var player = document.querySelectorAll("div#playerturn img")[0];
+        player.setAttribute('src', '/assets/images/o.png')
+    } 
 }
+
+
+
+//player 1 it's always the first player
+// if the game it's over, nothing else will be done
+//call the function
+// if the game over, return and don't do anything
+//if it's player 1 turn's, var player will search the image of #playerturn  and setAttribute will change "src" to "x image"

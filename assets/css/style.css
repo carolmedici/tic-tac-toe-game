@@ -13,7 +13,7 @@
     --back-color: rgb(21, 27, 42);
     --space-back-color: rgb(44, 57, 90);
     --text-color: rgb(162, 162, 162);
-    --main-color: rgb(67, 80, 111);;
+    --main-color: rgb(67, 80, 111);
 
 
     /*fonts*/
@@ -33,11 +33,12 @@ body{
 
 main{
     background-color: var(--main-color);
-    width: 100rem;
+    width: 25rem;
     margin: auto;
     margin-top: 5rem;
-    height: 70rem;
+    height: 120rem;
     border-radius: 1rem;
+    margin-bottom: 5rem;
     
 }
 
@@ -49,11 +50,11 @@ h1{
 
 }
 
+
 h2{
     font-size: 2.5rem;
-    position: relative;
-    left: 5rem;
-    padding-bottom: 1rem;
+    padding-top: 2rem; 
+    padding-bottom: 1.5rem;
 
 }
 p{
@@ -61,6 +62,9 @@ p{
     font-family: var(--font-text);
     width: 90rem;
     margin: auto;
+    width: 22rem;
+    text-align: justify;
+
 }
 
 
@@ -75,12 +79,132 @@ left: 28rem;
     text-align: center;
     font-family: var(--font-titule);
     font-size: 1.7rem;
+    padding-top: 1rem;
 }
+#rules{
+    padding-right: 1.2rem;
+    padding-left: 1.2rem;
+    color: black;
+}
+
 
 input{
 
 }
 
+
+#player-turn{
+    float: left;
+    margin-right: 1rem;
+    font-family: var(--font-titule);
+    font-size: 1.8rem;
+    padding-bottom: 2rem;
+    padding-left: 1rem;
+}
+
+#first-x{
+    width: 2rem;
+    height: 2rem;
+    position: relative;
+    top: 0.4rem;
+}
+
+#game{
+    width: 20rem;
+    height: 20rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    position: relative;
+    right: 7%;
+    margin: auto;
+
+  
+}
+
+.space{
+    width: 7em;
+    height:6rem;
+    background-color: var(--space-back-color);
+    margin-left: 0.5rem;
+    margin-top: 0.5rem;
+    border-radius: 1rem;
+    text-align: center;
+    padding-top: 1rem;
+   
+}
+
+#space1{
+    grid-column-start: 1;
+    grid-row-start: 1;
+ }
+ 
+ #space2{
+     grid-column-start: 2;
+     grid-row-start: 1;
+ }
+ #space3{
+     grid-column-start: 3;
+     grid-row-start: 1;
+ }
+ #space4{
+     grid-column-start: 1;
+     grid-row-start: 2;
+ }
+ #space5{
+     grid-column-start: 2;
+     grid-row-start: 2;
+ }
+ #space6{
+     grid-column-start: 3;
+     grid-row-start: 2;
+ }
+ #space7{
+     grid-column-start: 1;
+     grid-row-start: 3;
+ }
+ #space8{
+     grid-column-start: 2;
+     grid-row-start: 3;
+ }
+ #space9{
+     grid-column-start: 3;
+     grid-row-start: 3;
+ }
+
+
+#result{
+    font-size: 1.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.scoreboard{
+    padding-bottom: 1rem;
+}
+
+ #restart{
+    border-style: none;
+    background-color: var(--back-color);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 5rem;
+    margin-top: 8rem;
+    font-family: var(--font-text);
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 25rem){
 #game{
     width: 20rem;
     height: 20rem;
@@ -104,40 +228,6 @@ input{
    
 }
 
-#space1{
-   grid-column-start: 1;
-   grid-row-start: 1;
-}
 
-#space2{
-    grid-column-start: 2;
-    grid-row-start: 1;
-}
-#space3{
-    grid-column-start: 3;
-    grid-row-start: 1;
-}
-#space4{
-    grid-column-start: 1;
-    grid-row-start: 2;
-}
-#space5{
-    grid-column-start: 2;
-    grid-row-start: 2;
-}
-#space6{
-    grid-column-start: 3;
-    grid-row-start: 2;
-}
-#space7{
-    grid-column-start: 1;
-    grid-row-start: 3;
-}
-#space8{
-    grid-column-start: 2;
-    grid-row-start: 3;
-}
-#space9{
-    grid-column-start: 3;
-    grid-row-start: 3;
+
 }
