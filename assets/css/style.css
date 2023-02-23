@@ -33,7 +33,7 @@ body{
 
 main{
     background-color: var(--main-color);
-    width: 20rem;
+    width: 25rem;
     margin: auto;
     margin-top: 5rem;
     height: 54rem;
@@ -132,7 +132,7 @@ nav{
 h2{
     font-size: 2rem;
     padding-bottom: 1.5rem;
-    padding-left: 3rem;
+    padding-left: 4rem;
     color: white;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.455);
 
@@ -144,15 +144,19 @@ p{
     margin-left: 0.5rem;
     margin-bottom: 1rem;
     float: left;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.455);
     
 }
 
 
 .changeT {
 text-align: right;
-position: relative;
-bottom: 26rem;
-left: 28rem;
+position: absolute;
+bottom: 3.5rem;
+left: 4rem;
+margin-bottom: 5rem;
+text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.455);
+
 }
 
 #play{
@@ -160,6 +164,7 @@ left: 28rem;
     font-family: var(--font-titule);
     font-size: 1.7rem;
     padding-top: 1rem;
+    
 }
 #rules{
     padding-right: 1.2rem;
@@ -169,7 +174,7 @@ left: 28rem;
 
 
 input{
-
+width: 10rem;
 }
 
 
@@ -178,7 +183,6 @@ input{
     width: 2rem;
     height: 2rem;
     position: relative;
-    top: 0.1rem;
     padding-left: 1rem;
 }
 
@@ -189,14 +193,14 @@ input{
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     position: relative;
-    left: 0.1rem;
+    left: 1rem;
 
   
 }
 
 .space{
-    width: 5.5em;
-    height:5.5rem;
+    width: 7em;
+    height:6rem;
     background-color: var(--space-back-color);
     margin-left: 0.5rem;
     margin-top: 0.5rem;
@@ -247,12 +251,17 @@ input{
 
 #result{
     font-size: 1.5rem;
-    padding-top: 1rem;
+    padding-top: 5rem;
     padding-bottom: 1rem;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.455);
+    position: relative;
+        
 }
 
+
 .scoreboard{
-    padding-bottom: 1rem;
+    margin-top: 2rem;
+    padding-left: 2rem;
 }
 
  #restart{
@@ -261,7 +270,8 @@ input{
     color: white;
     padding: 1.5rem;
     border-radius: 5rem;
-    margin-top: 8rem;
+    margin-top: 1rem;
+    margin-left: 9.5rem;
     font-family: var(--font-text);
  }
 
@@ -276,30 +286,114 @@ input{
 
 
 
-@media (min-width: 25rem){
+@media (min-width: 22rem){
+
+   
+
+main{
+    width: 100rem;
+    height: 54rem;
+    margin: auto;
+    margin-top: 5rem;
+   
+    
+}
+
+h1{
+    font-size: 3.5rem;
+}
+
+.bar{
+    display: none;
+}
+
+.nav{
+    display: block;
+    position: relative; 
+    left: 2rem;  
+    width: 45rem;
+}
+
+.nav ol{
+    width: 40rem;
+    height: 25rem;
+    padding-left: 3rem;
+    padding-top: 3rem;
+    
+}
+
+.nav li{
+    font-size: 1.5rem;
+}
+
+p{
+    position: relative;
+    left: 61rem;
+    bottom: 37rem;
+    font-size: 1.6rem;
+    
+    
+}
+
+#img-player-turn{
+    width: 2rem;
+    height: 2rem;
+    position: relative;
+    top: -36.8rem;
+    left: 61rem;
+    float: none;    
+    padding-left: 1rem;
+}
+
+
 #game{
     width: 20rem;
     height: 20rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
     position: relative;
-    right: 7%;
-    margin: auto;
+    top: -37rem;
+    left: 49rem;
+    margin-right: 0;
+    
 
   
 }
 
+.space img{
+    width: 6rem;
+    height: 6rem;
+    padding-top: 1rem;
+}
+
 .space{
-    width: 10rem;
-    height: 10rem;
-    background-color: var(--space-back-color);
+    width: 9rem;
+    height: 9rem;
     margin-left: 1rem;
     margin-top: 1rem;
     border-radius: 1rem;
    
 }
 
+#result{
+left: 56rem;
+top: -28rem;
+}
 
 
+.scoreboard{
+    padding-left: 5.5rem;
+}
+
+#restart{
+position: relative;
+bottom: 28rem;
+left:63rem;
+
+}
+
+
+
+.changeT{
+    left: 29rem;
+    bottom: 12rem;
+}
 }
