@@ -10,10 +10,10 @@
 
 :root{
     /*color*/
-    --back-color: rgb(21, 27, 42);
+    --back-color: rgb(63, 81, 125);
     --space-back-color: rgb(44, 57, 90);
     --text-color: rgb(162, 162, 162);
-    --main-color: rgb(67, 80, 111);
+    --main-color: rgb(180, 188, 209);
 
 
     /*fonts*/
@@ -28,15 +28,15 @@
 body{
     background-color: var(--back-color);
     color: white;
-    text-shadow: 1px 1px 1px black;
+    
 }
 
 main{
     background-color: var(--main-color);
-    width: 25rem;
+    width: 20rem;
     margin: auto;
     margin-top: 5rem;
-    height: 120rem;
+    height: 54rem;
     border-radius: 1rem;
     margin-bottom: 5rem;
     
@@ -44,27 +44,107 @@ main{
 
 h1{
     font-family: var(--font-titule);
-    font-size: 4rem;
+    font-size: 3rem;
     padding: 1rem;
     text-align: center;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.455);
 
 }
 
+nav{
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+    font-family: var(--font-text);
+    margin-right: 0.5rem;   
+    margin-left: 0.5rem; 
+    }
+    
+      
+    #menu-bar{
+    width: 2rem;
+    height: 3rem;
+    cursor: pointer;
+    margin-top: 2.7rem;
+    }
+    
+    .bar{
+    height: 0.4em;
+    width: 15%;
+    background-color: white;
+    box-shadow: 1px 1px  rgba(0, 0, 0, 0.123);
+    display: block;
+    transition: 0.3s ease;
+    position: relative;
+    top: -2.7rem;
+    left: 0rem;
+    }
+    
+    #bar1{ 
+    transform: translateY(-4px);
+        }
+    
+       
+    .nav{
+    transition: 0.3s ease;
+    display: none;
+    background-color: white;  
+    position: relative; 
+    left: 1rem;  
+    border-radius: 0.8rem; 
+   
+    }
+    
+    .nav ol{
+    width: 15rem;
+    height: 40rem;
+    padding-left: 2rem;
+    padding-top: 2rem;
+    }
+    
+    .nav li{
+    padding-bottom: 1.8rem;
+    font-weight: 400;
+    font-size: 1.3rem;  
+    text-align: justify;  
+    
+    }
+  
+          
+    .change{
+    display: block;
+    margin-left: -2rem;  
+    }
+       
+    
+    .change .bar{
+     margin-left: 2rem;
+    }
+    
+    .change #bar1{
+    transform: translateY(3px) rotateZ(-45deg);
+    }
+    .change #bar2 {
+        transform: translateY(-1px) rotateZ(45deg);
+    }
+    
 
 h2{
-    font-size: 2.5rem;
-    padding-top: 2rem; 
+    font-size: 2rem;
     padding-bottom: 1.5rem;
+    padding-left: 3rem;
+    color: white;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.455);
 
 }
-p{
-    font-size: 1.7rem;
-    font-family: var(--font-text);
-    width: 90rem;
-    margin: auto;
-    width: 22rem;
-    text-align: justify;
 
+p{
+    font-size: 1.5rem;
+    font-family: var(--font-text);
+    margin-left: 0.5rem;
+    margin-bottom: 1rem;
+    float: left;
+    
 }
 
 
@@ -93,20 +173,13 @@ input{
 }
 
 
-#player-turn{
-    float: left;
-    margin-right: 1rem;
-    font-family: var(--font-titule);
-    font-size: 1.8rem;
-    padding-bottom: 2rem;
-    padding-left: 1rem;
-}
 
-#first-x{
+#img-player-turn{
     width: 2rem;
     height: 2rem;
     position: relative;
-    top: 0.4rem;
+    top: 0.1rem;
+    padding-left: 1rem;
 }
 
 #game{
@@ -116,15 +189,14 @@ input{
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     position: relative;
-    right: 7%;
-    margin: auto;
+    left: 0.1rem;
 
   
 }
 
 .space{
-    width: 7em;
-    height:6rem;
+    width: 5.5em;
+    height:5.5rem;
     background-color: var(--space-back-color);
     margin-left: 0.5rem;
     margin-top: 0.5rem;

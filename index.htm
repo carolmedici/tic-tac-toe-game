@@ -9,28 +9,39 @@
 
     <link rel="stylesheet" href="/assets/css/style.css">
     
-    <script type="text/javascript" src="/assets/javascript/script.js"></script>
+    
 
 
 
 </head>
 
-<body>
+<body >
     <main>
         <h1>Tic Tac Toe</h1>
         <div id="rules">
             <h2>Rules</h2>
-            <p><strong>1.</strong>  The game is played on a grid of 3 x 3 squares. <br><br>
-            <strong>2.</strong>  You are X, your friend (or the computer) is O. Players take turns placing their marks on empty squares. <br><br>
-            <strong>3.</strong> The player who manages to form a line with three identical symbols first, whether horizontally, vertically or diagonally, wins. <br><br>
-            <strong>4.</strong> If at the end of the game all squares are filled and no player has 3 marks in a row, it is a tie.</p>
-            <div id="play">Let's Play</div>
+            <div id="rules-bar" onclick="rulesOnClick()">
+            <div id="bar1" class="bar"></div>
+            <div id="bar2" class="bar"></div>
         </div>
+
+           
+            <nav id="nav" class="nav">
+                <ol>
+                    <li> The game is played on a grid of 3 x 3 squares. </li><br>
+                    <li>  You are X, your friend (or the computer) is O. Players take turns placing their marks on empty squares. </li> <br>
+                    <li> The player who manages to form a line with three identical symbols first, whether horizontally, vertically or diagonally, wins. </li><br>
+                    <li> If at the end of the game all squares are filled and no player has 3 marks in a row, it is a tie.</li>
+                </ol>
+                <div id="play">Have fun!</div>
+            </nav>
+        </div>
+        
 
         <div>
             <p class="changeT">Choose a different theme:</p>
             <label id="change" class="change">
-                <input type="checkbox" onchange="changeTheme()" id="switch">
+                <input type="checkbox"  id="switch">
                 <span class="slider"></span>
             </label>
         </div>
@@ -38,9 +49,9 @@
     
 
        
-    <div id="playerturn" onload="updatePlayerTurn()">
+    <div id="playerturn">
         <p>Player's turn:</p> 
-        <img src="" height="8rem">
+        <img id="img-player-turn" src="" height="8rem">
     </div>
 
         <div id="game">
@@ -66,10 +77,11 @@
                 </div>
              </div>
         
-
+             
             
              <button id="restart">Reset</button>
         </div>
     </main>
+    <script type="text/javascript" src="/assets/javascript/script.js"></script>
 </body>
 </html>
