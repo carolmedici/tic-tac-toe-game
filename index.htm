@@ -19,12 +19,15 @@
     <main>
         <h1>Tic Tac Toe</h1>
         <div id="rules">
-            <h2>Rules</h2>
+            <h2 id="rule-modal" onclick="openModal()">Rules</h2>
             <div id="rules-bar" onclick="rulesOnClick()">
             <div id="bar1" class="bar"></div>
             <div id="bar2" class="bar"></div>
         </div>
 
+        <div id="myModal" class="modal">
+            <span class="close cursor" onclick="closeModal()">&times;</span>
+             <div class="modal-content">
            
             <nav id="nav" class="nav">
                 <ol>
@@ -33,18 +36,18 @@
                     <li> The player who manages to form a line with three identical symbols first, whether horizontally, vertically or diagonally, wins. </li><br>
                     <li> If at the end of the game all squares are filled and no player has 3 marks in a row, it is a tie.</li>
                 </ol>
-                <div id="play">Have fun!</div>
+                
             </nav>
         </div>
-        
+        </div>
 
         <div>
-            <p class="changeT">Theme:</p>
-            <label id="change" class="change">
-                <input type="checkbox"  id="switch">
+            <p class="changeTheme">Theme</p>
+            <label id="changeT" class="changeT">
+                <input type="checkbox"  id="switch" onchange="changeTheme()">
                 <span class="slider"></span>
-            </label>
-        </div>
+            </label>           
+        </div></div>
 
     
 
@@ -72,17 +75,16 @@
             </div>
 
         </div>
-
+             <p id="placar-score">Placar Score</p>
              <div id="result">
-             <span class="scoreboard" id="win">You win: </span>
-             <span class="scoreboard" id="tie">A tie:</span>
-             <span class="scoreboard" id="loose">You loose: 
-             </span>
+             <div class="scoreboard" id="win">You win: </div>
+             <div class="scoreboard" id="tie">A tie:</div>
+             <div class="scoreboard" id="loose">You loose: </div>
              </div>
         
              
             
-             <button id="restart">Reset</button>
+             <button id="restart">Play again</button>
        
     </main>
     <script type="text/javascript" src="/assets/javascript/script.js"></script>

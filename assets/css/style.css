@@ -2,6 +2,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;700&family=Space+Grotesk&display=swap');
 
+
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+
 *{
     padding: 0;
     margin: 0;
@@ -10,15 +13,19 @@
 
 :root{
     /*color*/
-    --back-color: rgb(63, 81, 125);
-    --space-back-color: rgb(44, 57, 90);
+    --back-color: #668F80;
+    --space-back-color: #4A6670;
     --text-color: rgb(162, 162, 162);
-    --main-color: rgb(180, 188, 209);
+    --main-color: #668F80;
+    --rules-color: #D1D5DE;
+    --nav-color: rgb(50, 50, 50);
+    --score-color: #D6A2AD;
+    --hover-color: #C3B59F;
 
 
     /*fonts*/
-    --font-titule: 'Prompt', sans-serif;
-    --font-text: 'Space Grotesk', sans-serif;
+    --font-titule: 'Tilt Neon', cursive;
+    --font-text: 'Tilt Neon', sans-serif;
 
 
     /*accessibility*/
@@ -27,28 +34,28 @@
 
 body{
     background-color: var(--back-color);
-    color: white;
-    
 }
 
 main{
     background-color: var(--main-color);
     width: 25rem;
     margin: auto;
-    margin-top: 5rem;
-    height: 54rem;
+    margin-top: 2rem;
+    height: 60rem;
     border-radius: 1rem;
-    margin-bottom: 5rem;
+    margin-bottom: 10rem;
+    font-family: var(--font-text);
     
 }
 
 h1{
     font-family: var(--font-titule);
-    font-size: 3rem;
-    padding: 1rem;
+    font-size: 4rem;
+    padding-bottom: 2rem;
     text-align: center;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.455);
-
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.537);
+    color:var(--score-color);
+    margin-bottom: 2rem;
 }
 
 nav{
@@ -58,51 +65,52 @@ nav{
     font-family: var(--font-text);
     margin-right: 0.5rem;   
     margin-left: 0.5rem; 
-    }
+}
     
-      
-    #menu-bar{
+/*MENU*/      
+#menu-bar{
     width: 2rem;
     height: 3rem;
     cursor: pointer;
     margin-top: 2.7rem;
-    }
+}
     
-    .bar{
+.bar{
     height: 0.4em;
-    width: 15%;
+    width: 10%;
     background-color: white;
     box-shadow: 1px 1px  rgba(0, 0, 0, 0.123);
     display: block;
     transition: 0.3s ease;
     position: relative;
-    top: -2.7rem;
-    left: 0rem;
+    top: -2.9rem;
+    left: 2rem;
     }
     
-    #bar1{ 
+#bar1{ 
     transform: translateY(-4px);
-        }
+}
     
        
-    .nav{
+.nav{
     transition: 0.3s ease;
     display: none;
-    background-color: white;  
+    background-color: var(--rules-color);  
     position: relative; 
     left: 1rem;  
     border-radius: 0.8rem; 
-   
-    }
+}
     
-    .nav ol{
-    width: 15rem;
-    height: 40rem;
-    padding-left: 2rem;
+.nav ol{
+    width: 20rem;
+    height: 30rem;
+    padding-left: 3rem;
     padding-top: 2rem;
-    }
+    padding-bottom: 2rem;
     
-    .nav li{
+}
+    
+.nav li{
     padding-bottom: 1.8rem;
     font-weight: 400;
     font-size: 1.3rem;  
@@ -111,81 +119,133 @@ nav{
     }
   
           
-    .change{
+.change{
     display: block;
     margin-left: -2rem;  
-    }
+    z-index: 1;
+}
        
     
-    .change .bar{
-     margin-left: 2rem;
-    }
+.change .bar{
+    margin-left: 2rem;
+}
     
-    .change #bar1{
+.change #bar1{
     transform: translateY(3px) rotateZ(-45deg);
-    }
-    .change #bar2 {
-        transform: translateY(-1px) rotateZ(45deg);
-    }
+}
+.change #bar2 {
+    transform: translateY(-1px) rotateZ(45deg);
+ }
     
-
+/*RULES*/
 h2{
     font-size: 2rem;
     padding-bottom: 1.5rem;
-    padding-left: 4rem;
+    padding-left: 5rem;
     color: white;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.455);
+    font-family: var(--font-text);
 
 }
+/*CHANGE THEME*/
+p.changeTheme{
+    position: relative;
+    left: 1.8rem; 
+    top: -1rem;   
+    color: white;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.563);
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 5rem;
+}
 
+.changeT{
+    position: relative;
+    top: -0.5rem;
+    left: 3rem;
+}
+    
+
+input{
+    width: 6rem;
+    padding: 5px;
+}
+
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: -1rem; /*checkbox hide position*/
+    left: 0;
+    right: 0;
+    bottom: -1rem; /*checkbox hide position*/
+    background-color: var(--space-back-color);
+    -webkit-transition: 0.4s;
+    transition: 0.3s;
+    text-align: right;
+}
+      
+.slider:before { /* the slider control */
+    position: absolute;
+    content: "";
+    height: 2rem;
+    width: 2rem;
+    left: 0.5rem;
+    bottom: 4px;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    background: white;
+}
+
+input:checked + .slider {
+    background-color: var(--hover-color);
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(2.5rem);
+    -ms-transform: translateX(2.4rem);
+    transform: translateX(2.4rem);
+    background: white;
+}
+          
+.slider {
+    border-radius: 3rem;
+}
+        
+.slider:before {
+    border-radius: 50%;
+}
+
+/*PLAYER TURN*/
 p{
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-family: var(--font-text);
-    margin-left: 0.5rem;
     margin-bottom: 1rem;
     float: left;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.455);
+    color: white;
+    position: relative;
+    top: 3rem;
+    left: -1.5rem;
     
 }
-
-
-.changeT {
-text-align: right;
-position: absolute;
-bottom: 3.5rem;
-left: 4rem;
-margin-bottom: 5rem;
-text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.455);
-
-}
-
-#play{
-    text-align: center;
-    font-family: var(--font-titule);
-    font-size: 1.7rem;
-    padding-top: 1rem;
-    
-}
-#rules{
-    padding-right: 1.2rem;
-    padding-left: 1.2rem;
-    color: black;
-}
-
-
-input{
-width: 10rem;
-}
-
-
 
 #img-player-turn{
-    width: 2rem;
-    height: 2rem;
+    width: 3rem;
+    height: 3rem;
     position: relative;
+    left: -1.5rem;
+    bottom: -3rem;
+    float: none;    
     padding-left: 1rem;
 }
 
+
+
+/*GAME*/
 #game{
     width: 20rem;
     height: 20rem;
@@ -194,6 +254,7 @@ width: 10rem;
     grid-template-rows: 1fr 1fr 1fr;
     position: relative;
     left: 1rem;
+    
 
   
 }
@@ -249,115 +310,345 @@ width: 10rem;
  }
 
 
+
+        
+/*PLACAR SCORE*/
+
+#placar-score{
+    color: white;
+    position: relative;
+    top: 10.5rem;
+    left: 6rem;
+}
+
 #result{
-    font-size: 1.5rem;
-    padding-top: 5rem;
-    padding-bottom: 1rem;
+    left: 2rem;
+    top: 14rem;
+    font-size: 2rem;
+    background-color: var(--score-color);
+    width: 21rem;
+padding: 1rem 0;
+border-radius: 1rem;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.455);
     position: relative;
-        
+    color: white;
+    margin-bottom: 2rem;
 }
 
 
 .scoreboard{
-    margin-top: 2rem;
-    padding-left: 2rem;
+    padding-right: 2rem;
 }
+
+#win{
+    position: relative;
+    left: -9rem;
+}
+
+#loose, #tie{
+    padding-top: 2rem;
+    position: relative;
+    left: 2rem;
+}
+
 
  #restart{
     border-style: none;
-    background-color: var(--back-color);
+    background-color: var(--score-color);
     color: white;
-    padding: 1.5rem;
+    padding: 1rem;
     border-radius: 5rem;
-    margin-top: 1rem;
+    margin-top: 0rem;
     margin-left: 9.5rem;
     font-family: var(--font-text);
+    position: relative;
+    top: -12rem;
+    left: -1rem;
+}
+ 
+
+ #restart:hover{
+    background-color: var(--hover-color);
  }
 
 
+/*hidden modal on mobile*/
+ .modal {
+    display: none;
+}
+
+.close {
+    display: none;
+}
+
+/* ----------------------------------------------------------------------------------------------------------*/
+
+@media (min-width: 38rem){
+
+    h1{
+        font-size: 6rem;
+        text-align: left;
+        margin-bottom: 2rem;
+        margin-top: 10rem;
+        width: 50rem;
+    }
+    
+    nav{
+        display: flex;
+        justify-content: space-between;
+        flex-grow: 1;
+        font-family: var(--font-text);
+        margin-right: 0.5rem;   
+        margin-left: 0.5rem; 
+    }
+        
+    /*MENU*/      
+          
+    .bar{
+        height: 0.6em;
+        width: 15%;
+        top: -2.7rem;
+        left: -20rem;
+        }
+        
+       
+           
+    .nav{
+        transition: 0.3s ease;
+        display: none;
+        background-color: var(--rules-color);  
+        position: relative; 
+        left: 1rem;  
+        border-radius: 0.8rem; 
+    }
+        
+    .nav ol{
+        width: 15rem;
+        height: 40rem;
+        padding-left: 2rem;
+        padding-top: 2rem;
+    }
+        
+    .nav li{
+        padding-bottom: 1.8rem;
+        font-weight: 400;
+        font-size: 1.3rem;  
+        text-align: justify;  
+        
+        }
+      
+              
+    .change{
+        display: block;
+        margin-left: -2rem;  
+    }
+           
+        
+    .change .bar{
+        margin-left: 2rem;
+    }
+        
+    .change #bar1{
+        transform: translateY(3px) rotateZ(-45deg);
+    }
+    .change #bar2 {
+        transform: translateY(-1px) rotateZ(45deg);
+     }
+        
+    /*RULES*/
+    h2{
+        font-size: 4rem;
+        position: relative;
+        left: -20rem;
+        top: 1.5rem;     
+    }
+
+    /*CHANGE THEME*/
+    p.changeTheme{
+        position: relative;
+        left: -20rem; 
+        top: 1rem;   
+        font-size: 4rem;
+    }
+    
+    .changeT{
+        position: relative;
+        top: 3rem;
+        left: -18rem;
+    }
+        
+    
+    
+    /*PLAYER TURN*/
+    p{
+        font-size: 4rem;
+                
+    }
+    
+    #img-player-turn{
+        width: 4rem;
+        height: 4rem;
+        left: 11rem;
+        bottom: -12rem;
+        
+    }
+    
+    
+    
+    /*GAME*/
+    #game{
+        width: 30rem;
+        height: 30rem;
+       top: 4rem;
+        left: -5rem;
+    
+      
+    }
+    
+    .space{
+        width: 12em;
+        height:12rem;
+             
+       
+    }
+    
+     
+            
+    /*PLACAR SCORE*/
+    
+    #placar-score{
+        color: white;
+        position: relative;
+        top: 30rem;
+        left: 4rem;
+    }
+    
+    #result{
+        left: 2rem;
+        top: 37rem;
+        font-size: 3rem;
+        width: 25rem;
+    }
+    
+    
+    .scoreboard{
+        padding-right: 2rem;
+    }
+    
+        
+    #loose, #tie, #win{
+        left: 2rem;
+        top: -2.5rem;
+    }
+    
+    
+     #restart{
+       font-size: 3rem;
+       padding: 2rem;
+        top: -8rem;
+        left: -5rem;
+        width: 20rem;
+        
+    }
 
 
 
 
 
 
+}
 
 
 
 
-@media (min-width: 22rem){
-
-   
+/* ----------------------------------------------------------------------------------------------------------*/
+@media (min-width: 60rem){
 
 main{
-    width: 100rem;
+    width: 109rem;
     height: 54rem;
     margin: auto;
-    margin-top: 5rem;
-   
     
 }
 
 h1{
-    font-size: 3.5rem;
+    font-size: 6rem;
+    position: relative;
+    left: 39rem;
+    top: -2rem;
+    margin-bottom: -1rem;
 }
 
+h2{
+    position: relative;
+    top: 4.7rem;
+    left: -2rem;
+    font-size:3rem;
+    cursor: pointer;
+}
+
+/* hidden the menu burguer*/
 .bar{
     display: none;
 }
 
+/* rules nav*/
 .nav{
     display: block;
     position: relative; 
     left: 2rem;  
+    top: 3rem;
     width: 45rem;
+    background-color: var(--rules-color);
+    padding-bottom: 1rem;
+    color: var(--nav-color)
 }
 
 .nav ol{
-    width: 40rem;
+    width: 35rem;
     height: 25rem;
-    padding-left: 3rem;
-    padding-top: 3rem;
-    
+    padding: 3rem 0 3rem 5rem;
 }
 
 .nav li{
     font-size: 1.5rem;
 }
 
+/* player turn*/
 p{
     position: relative;
-    left: 61rem;
-    bottom: 37rem;
-    font-size: 1.6rem;
+    left: 32.5rem;
+    top: -2rem;
+    font-size: 3rem;
+    font-weight: 600;
+    font-family: var(--font-text);
+    color: white;
     
     
 }
 
+/* image player turn*/
 #img-player-turn{
-    width: 2rem;
-    height: 2rem;
+    width: 3rem;
+    height: 3rem;
     position: relative;
-    top: -36.8rem;
-    left: 61rem;
+    left: 33rem;
+    bottom: 1.5rem;
     float: none;    
     padding-left: 1rem;
 }
 
-
+/*game*/
 #game{
     width: 20rem;
     height: 20rem;
     position: relative;
-    top: -37rem;
-    left: 49rem;
-    margin-right: 0;
+    top: 0rem;
+    left: 11rem;
     
-
-  
 }
 
+/*X and O images in spaces*/
 .space img{
     width: 6rem;
     height: 6rem;
@@ -370,30 +661,164 @@ p{
     margin-left: 1rem;
     margin-top: 1rem;
     border-radius: 1rem;
-   
+}
+
+
+/*placar score*/
+
+#placar-score{
+    color: white;
+    position: relative;
+    top: -25.5rem;
+    left: 89rem;
 }
 
 #result{
-left: 56rem;
-top: -28rem;
+left: 85rem;
+top: -19rem;
+font-size: 2rem;
+background-color: var(--score-color);
+width: 27rem;
+padding-top: 4rem;
+border-radius: 1rem;
 }
 
 
 .scoreboard{
-    padding-left: 5.5rem;
+    padding-right: 2rem;
 }
 
+#win{
+    position: relative;
+    left: -15rem;
+    
+}
+
+
+/*reset button*/
 #restart{
 position: relative;
-bottom: 28rem;
-left:63rem;
+top: -4rem;
+left:34rem;
+font-size: 2rem;
 
 }
 
+/*The slider change theme button */
 
+p.changeTheme{
+    position: relative;
+    left: 3rem; 
+    top: 4rem;   
+    color: white;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.455);
+    font-size: 3rem ;
+}
 
 .changeT{
-    left: 29rem;
-    bottom: 12rem;
+    position: relative;
+    top: 5rem;
+    left: 5rem;
 }
+    
+
+input{
+    width: 6rem;
+    padding: 5px;
+}
+
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: -1rem; /*checkbox hide position*/
+    left: 0;
+    right: 0;
+    bottom: -1rem; /*checkbox hide position*/
+    background-color: var(--space-back-color);
+    -webkit-transition: 0.4s;
+    transition: 0.3s;
+    text-align: right;
+}
+      
+.slider:before { /* the slider control */
+    position: absolute;
+    content: "";
+    height: 2rem;
+    width: 2rem;
+    left: 0.5rem;
+    bottom: 4px;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    background: white;
+}
+
+
+
+input:checked + .slider {
+    background-color: var(--hover-color);
+    
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(2.5rem);
+    -ms-transform: translateX(2.4rem);
+    transform: translateX(2.4rem);
+    background: white;
+}
+          
+.slider {
+    border-radius: 3rem;
+}
+        
+.slider:before {
+    border-radius: 50%;
+}
+
+
+
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.767);
+  }
+  
+  /*Modal Content */
+  .modal-content {
+    position: relative;
+    top: 6rem;
+    left: 55rem;
+   }
+  
+  /* The Close Button */
+  .close {
+    color: white;
+    position: absolute;
+    top: 13rem;
+    right: 51rem;
+    font-size: 4rem;
+    font-weight: bold;
+    display: flex
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+    
+  }
+
 }
