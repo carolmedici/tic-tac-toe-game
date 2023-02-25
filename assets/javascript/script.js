@@ -93,41 +93,9 @@ alert(`The winner is: ${winner} !`)
  
 
     
-function sleep(ms){ //star a diferent program process
+function sleep(ms){ //start a diferent program process
     return new Promise(resolve=> setTimeout(resolve, ms));
 }
-
-
-
-
-/* hamburguer menu*/ 
-function rulesOnClick(){
-    document.getElementById("rules-bar").classList.toggle("change");  //classList.toggle insert class if it doesn't exist or remove it if it exists
-    document.getElementById("nav").classList.toggle("change");
-      
-}
-
-function setColor(themeName) {
-    localStorage.setItem('theme', themeName);
-    document.documentElement.className = themeName;
-}
-
-function changeTheme() {
-   if (localStorage.getItem('theme') === 'second-color'){
-       setColor('original-color');
-   } else {
-       setColor('second-color');
-   }
-}
-
-(function () {
-   if (localStorage.getItem('theme') === 'second-color') {
-       setColor('second-color');
-   } else {
-       setColor('original-color');
-   }
-})();
- 
 
 
 
@@ -165,4 +133,11 @@ function openModal() {
 // Close the Modal
 function closeModal() {
     document.getElementById("myModal").style.display = "none"; //hidde modal display"
+}
+
+
+/*RESTART BUTTON*/
+
+function restart(){
+
 }

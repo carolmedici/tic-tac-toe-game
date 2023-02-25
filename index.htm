@@ -19,14 +19,11 @@
     <main>
         <h1>Tic Tac Toe</h1>
         <div id="rules">
-            <h2 id="rule-modal" onclick="openModal()">Rules</h2>
-            <div id="rules-bar" onclick="rulesOnClick()">
-            <div id="bar1" class="bar"></div>
-            <div id="bar2" class="bar"></div>
+            <h2>Rules</h2><p id="rule-modal" onclick="openModal()"> ?</p>
         </div>
 
         <div id="myModal" class="modal">
-            <span class="close cursor" onclick="closeModal()">&times;</span>
+            <div class="close" onclick="closeModal()">&times;</div>
              <div class="modal-content">
            
             <nav id="nav" class="nav">
@@ -84,7 +81,7 @@
         
              
             
-             <button id="restart">Play again</button>
+             <button id="restart" onclick="restart()">Play again</button>
        
     </main>
     <script type="text/javascript" src="/assets/javascript/script.js"></script>

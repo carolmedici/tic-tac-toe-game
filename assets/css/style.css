@@ -41,7 +41,7 @@ main{
     width: 25rem;
     margin: auto;
     margin-top: 2rem;
-    height: 60rem;
+    height: 64rem;
     border-radius: 1rem;
     margin-bottom: 10rem;
     font-family: var(--font-text);
@@ -58,100 +58,103 @@ h1{
     margin-bottom: 2rem;
 }
 
-nav{
-    display: flex;
-    justify-content: space-between;
-    flex-grow: 1;
-    font-family: var(--font-text);
-    margin-right: 0.5rem;   
-    margin-left: 0.5rem; 
-}
-    
-/*MENU*/      
-#menu-bar{
-    width: 2rem;
-    height: 3rem;
-    cursor: pointer;
-    margin-top: 2.7rem;
-}
-    
-.bar{
-    height: 0.4em;
-    width: 10%;
-    background-color: white;
-    box-shadow: 1px 1px  rgba(0, 0, 0, 0.123);
-    display: block;
-    transition: 0.3s ease;
-    position: relative;
-    top: -2.9rem;
-    left: 2rem;
-    }
-    
-#bar1{ 
-    transform: translateY(-4px);
-}
-    
-       
-.nav{
-    transition: 0.3s ease;
+
+/* The Modal (background) */
+.modal {
     display: none;
-    background-color: var(--rules-color);  
-    position: relative; 
-    left: 1rem;  
-    border-radius: 0.8rem; 
-}
-    
-.nav ol{
-    width: 20rem;
-    height: 30rem;
-    padding-left: 3rem;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    
-}
-    
-.nav li{
-    padding-bottom: 1.8rem;
-    font-weight: 400;
-    font-size: 1.3rem;  
-    text-align: justify;  
-    
-    }
-  
-          
-.change{
-    display: block;
-    margin-left: -2rem;  
+    position: fixed;
     z-index: 1;
-}
-       
+    padding-top: 11px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.767);
+  }
+  
+  /*Modal Content */
+  .modal-content {
+    position: relative;
+    top: -10rem;
+    left: 5rem;
+   }
+  
+  /* The Close Button */
+  .close {
+    color: white;
+    position: absolute;
+    left: 22rem ;
+    top: 20rem;
+    font-size: 4rem;
+    font-weight: bold;
+    display: flex;
+
+  
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
     
-.change .bar{
-    margin-left: 2rem;
+  }
+
+.nav{
+    display: block;
+    position: relative; 
+    left: -4rem;  
+    top: 35rem;
+    width: 26rem;
+    background-color: var(--rules-color);
+    padding-bottom: 1rem;
+    color: var(--nav-color)
 }
-    
-.change #bar1{
-    transform: translateY(3px) rotateZ(-45deg);
+
+.nav ol{
+    width: 23rem;
+    height: 25rem;
+    padding: 2rem 0rem 3rem 2.5rem;
 }
-.change #bar2 {
-    transform: translateY(-1px) rotateZ(45deg);
- }
+
+.nav li{
+    font-size: 1.5rem;
+}
+
+
     
 /*RULES*/
 h2{
     font-size: 2rem;
     padding-bottom: 1.5rem;
-    padding-left: 5rem;
+    padding-left: 2rem;
     color: white;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.455);
     font-family: var(--font-text);
 
 }
+
+#rule-modal{
+width: 0.6rem;
+height: 0.6rem;
+padding: 0rem 1.2rem 2rem 0.8rem;
+border-radius: 50rem;
+border-color: white;
+border-style:solid;
+border-width:3px;
+position: relative;
+top: -4rem;
+left: 10rem;
+font-size: 2rem;
+font-weight: 600;
+}
+
 /*CHANGE THEME*/
 p.changeTheme{
     position: relative;
-    left: 1.8rem; 
-    top: -1rem;   
+    left: -1rem; 
+    top: 0rem;   
     color: white;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.563);
     font-size: 2rem;
@@ -161,8 +164,8 @@ p.changeTheme{
 
 .changeT{
     position: relative;
-    top: -0.5rem;
-    left: 3rem;
+    top: 0.5rem;
+    left: 1rem;
 }
     
 
@@ -228,8 +231,8 @@ p{
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.455);
     color: white;
     position: relative;
-    top: 3rem;
-    left: -1.5rem;
+    top: 5rem;
+    left: -4rem;
     
 }
 
@@ -237,8 +240,8 @@ p{
     width: 3rem;
     height: 3rem;
     position: relative;
-    left: -1.5rem;
-    bottom: -3rem;
+    left: -4rem;
+    bottom: -5rem;
     float: none;    
     padding-left: 1rem;
 }
@@ -254,6 +257,7 @@ p{
     grid-template-rows: 1fr 1fr 1fr;
     position: relative;
     left: 1rem;
+    top: 3em;
     
 
   
@@ -317,13 +321,13 @@ p{
 #placar-score{
     color: white;
     position: relative;
-    top: 10.5rem;
+    top: 14rem;
     left: 6rem;
 }
 
 #result{
     left: 2rem;
-    top: 14rem;
+    top: 17rem;
     font-size: 2rem;
     background-color: var(--score-color);
     width: 21rem;
@@ -362,7 +366,7 @@ border-radius: 1rem;
     margin-left: 9.5rem;
     font-family: var(--font-text);
     position: relative;
-    top: -12rem;
+    top: -9rem;
     left: -1rem;
 }
  
@@ -372,89 +376,44 @@ border-radius: 1rem;
  }
 
 
-/*hidden modal on mobile*/
- .modal {
-    display: none;
-}
 
-.close {
-    display: none;
-}
 
 /* ----------------------------------------------------------------------------------------------------------*/
 
 @media (min-width: 38rem){
 
+    main{
+        height: 120rem;
+    }
     h1{
         font-size: 6rem;
         text-align: left;
         margin-bottom: 2rem;
-        margin-top: 10rem;
+        margin-top: 5rem;
+        width: 50rem;
+    }
+  
+    /*modal*/
+
+    .close{
+        left: 62rem;
+        top: 25rem;
+        font-size: 6rem;
+    }
+
+    .nav {
+        width: 55rem;
+        height: 35rem;
+        top: 40rem;
+        left: 7rem;
+        font-size: 3rem;
+    }
+    
+    .nav li{
+        font-size: 2rem;
         width: 50rem;
     }
     
-    nav{
-        display: flex;
-        justify-content: space-between;
-        flex-grow: 1;
-        font-family: var(--font-text);
-        margin-right: 0.5rem;   
-        margin-left: 0.5rem; 
-    }
-        
-    /*MENU*/      
-          
-    .bar{
-        height: 0.6em;
-        width: 15%;
-        top: -2.7rem;
-        left: -20rem;
-        }
-        
-       
-           
-    .nav{
-        transition: 0.3s ease;
-        display: none;
-        background-color: var(--rules-color);  
-        position: relative; 
-        left: 1rem;  
-        border-radius: 0.8rem; 
-    }
-        
-    .nav ol{
-        width: 15rem;
-        height: 40rem;
-        padding-left: 2rem;
-        padding-top: 2rem;
-    }
-        
-    .nav li{
-        padding-bottom: 1.8rem;
-        font-weight: 400;
-        font-size: 1.3rem;  
-        text-align: justify;  
-        
-        }
-      
-              
-    .change{
-        display: block;
-        margin-left: -2rem;  
-    }
-           
-        
-    .change .bar{
-        margin-left: 2rem;
-    }
-        
-    .change #bar1{
-        transform: translateY(3px) rotateZ(-45deg);
-    }
-    .change #bar2 {
-        transform: translateY(-1px) rotateZ(45deg);
-     }
-        
     /*RULES*/
     h2{
         font-size: 4rem;
@@ -463,10 +422,22 @@ border-radius: 1rem;
         top: 1.5rem;     
     }
 
+    #rule-modal{
+        width: 1rem;
+        height: 1rem;
+        padding: 0rem 1.8rem 3rem 1.2rem;
+        border-width:4px;
+        position: relative;
+        top: -4.5rem;
+        left: -1.5rem;
+        font-size: 3rem;
+        
+        }
+
     /*CHANGE THEME*/
     p.changeTheme{
         position: relative;
-        left: -20rem; 
+        left: -22.5rem; 
         top: 1rem;   
         font-size: 4rem;
     }
@@ -482,14 +453,15 @@ border-radius: 1rem;
     /*PLAYER TURN*/
     p{
         font-size: 4rem;
+        left: 0rem;
                 
     }
     
     #img-player-turn{
         width: 4rem;
         height: 4rem;
-        left: 11rem;
-        bottom: -12rem;
+        left: 7rem;
+        bottom: -14rem;
         
     }
     
@@ -501,18 +473,19 @@ border-radius: 1rem;
         height: 30rem;
        top: 4rem;
         left: -5rem;
-    
-      
     }
     
     .space{
         width: 12em;
         height:12rem;
-             
-       
     }
     
-     
+     /*X and O images in spaces*/
+    .space img{
+    width: 6rem;
+    height: 6rem;
+    padding-top: 2rem;
+    }
             
     /*PLACAR SCORE*/
     
@@ -544,7 +517,7 @@ border-radius: 1rem;
     
      #restart{
        font-size: 3rem;
-       padding: 2rem;
+       padding: 1rem;
         top: -8rem;
         left: -5rem;
         width: 20rem;
@@ -582,42 +555,93 @@ h1{
 h2{
     position: relative;
     top: 4.7rem;
-    left: -2rem;
+    left: 4.3rem;
     font-size:3rem;
+    
+}
+
+#rule-modal{
+    width: 0.6rem;
+    height: 0.6rem;
+    padding: 0rem 1.2rem 2rem 0.8rem;
+    border-width:3.5px;
+    position: relative;
+    top: 0rem;
+    left: 17rem;
+    font-size: 2rem;
+    font-weight: 600;
     cursor: pointer;
-}
+    }
 
-/* hidden the menu burguer*/
-.bar{
+
+/* The Modal (background) */
+.modal {
     display: none;
-}
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.767);
+  }
+  
+  /*Modal Content */
+  .modal-content {
+    position: relative;
+    top: 6rem;
+    left: 55rem;
+   }
+  
+  /* The Close Button */
+  .close {
+    color: white;
+    position: absolute;
+    top: 13rem;
+    left: 100rem;
+    font-size: 4rem;
+    font-weight: bold;
+    display: flex
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+    
+  }
 
-/* rules nav*/
 .nav{
     display: block;
     position: relative; 
-    left: 2rem;  
+    left: -7rem;  
     top: 3rem;
-    width: 45rem;
+    width: 55rem;
+    height: 40rem;
     background-color: var(--rules-color);
     padding-bottom: 1rem;
     color: var(--nav-color)
 }
 
 .nav ol{
-    width: 35rem;
+    width: 40rem;
     height: 25rem;
-    padding: 3rem 0 3rem 5rem;
+    padding: 3rem 1rem 3rem 4rem;
 }
 
 .nav li{
-    font-size: 1.5rem;
+    font-size: 2rem;
+    padding-bottom: 0;
+    
 }
 
 /* player turn*/
 p{
     position: relative;
-    left: 32.5rem;
+    left: 30.5rem;
     top: -2rem;
     font-size: 3rem;
     font-weight: 600;
@@ -632,7 +656,7 @@ p{
     width: 3rem;
     height: 3rem;
     position: relative;
-    left: 33rem;
+    left: 31rem;
     bottom: 1.5rem;
     float: none;    
     padding-left: 1rem;
@@ -644,7 +668,7 @@ p{
     height: 20rem;
     position: relative;
     top: 0rem;
-    left: 11rem;
+    left: 8rem;
     
 }
 
@@ -781,44 +805,5 @@ input:checked + .slider:before {
 
 
 
-/* The Modal (background) */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    padding-top: 100px;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.767);
-  }
-  
-  /*Modal Content */
-  .modal-content {
-    position: relative;
-    top: 6rem;
-    left: 55rem;
-   }
-  
-  /* The Close Button */
-  .close {
-    color: white;
-    position: absolute;
-    top: 13rem;
-    right: 51rem;
-    font-size: 4rem;
-    font-weight: bold;
-    display: flex
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: #999;
-    text-decoration: none;
-    cursor: pointer;
-    
-  }
 
 }
