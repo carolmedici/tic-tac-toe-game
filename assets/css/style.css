@@ -11,18 +11,7 @@
     
 }
 
-:root{
-    /*color*/
-    --back-color: #668F80;
-    --space-back-color: #4A6670;
-    --text-color: rgb(162, 162, 162);
-    --main-color: #668F80;
-    --rules-color: #D1D5DE;
-    --nav-color: rgb(50, 50, 50);
-    --score-color: #D6A2AD;
-    --hover-color: #C3B59F;
-
-
+:root{ 
     /*fonts*/
     --font-titule: 'Tilt Neon', cursive;
     --font-text: 'Tilt Neon', sans-serif;
@@ -30,7 +19,30 @@
 
     /*accessibility*/
     font-size: 62.5%;
+
+     /*color*/
+     --text-color: rgb(162, 162, 162);
+     --rules-color: #D1D5DE;
+     --nav-color: rgb(50, 50, 50);
+     --hover-color: #C3B59F;
 }
+
+/* CHOOSE THE TWO COLORS THEME*/
+.original-color{
+    --score-color:#D6A2AD;
+    --back-color: #668F80;
+    --space-back-color: #4A6670;
+}
+
+
+.second-color{
+    --score-color: #f15bb5;
+    --back-color:  #00f5d4;
+    --space-back-color: #FEE440 ; 
+    
+}
+
+
 
 body{
     background-color: var(--back-color);
@@ -59,7 +71,7 @@ h1{
 }
 
 
-/* The Modal (background) */
+/* THE MODAL (BACKGROUND) */
 .modal {
     display: none;
     position: fixed;
@@ -73,14 +85,14 @@ h1{
     background-color: rgba(0, 0, 0, 0.767);
   }
   
-  /*Modal Content */
+  /*MODAL CONTENT */
   .modal-content {
     position: relative;
     top: -10rem;
     left: 5rem;
    }
   
-  /* The Close Button */
+  /* CLOSE BUTTON */
   .close {
     color: white;
     position: absolute;
@@ -150,7 +162,7 @@ font-size: 2rem;
 font-weight: 600;
 }
 
-/*CHANGE THEME*/
+/*CHANGE THEME BUTTON*/
 p.changeTheme{
     position: relative;
     left: -1rem; 
@@ -393,7 +405,7 @@ border-radius: 1rem;
         width: 50rem;
     }
   
-    /*modal*/
+    /*MODAL*/
 
     .close{
         left: 62rem;
@@ -574,7 +586,7 @@ h2{
     }
 
 
-/* The Modal (background) */
+/* THE MODAL (BACKGROUND) */
 .modal {
     display: none;
     position: fixed;
@@ -588,14 +600,14 @@ h2{
     background-color: rgba(0, 0, 0, 0.767);
   }
   
-  /*Modal Content */
+  /*MODAL CONTENT */
   .modal-content {
     position: relative;
     top: 6rem;
     left: 55rem;
    }
   
-  /* The Close Button */
+  /* CLOSE BUTTON */
   .close {
     color: white;
     position: absolute;
@@ -638,7 +650,7 @@ h2{
     
 }
 
-/* player turn*/
+/* PLAYER TURN*/
 p{
     position: relative;
     left: 30.5rem;
@@ -651,7 +663,7 @@ p{
     
 }
 
-/* image player turn*/
+/* IMAGE PLAYER TURN*/
 #img-player-turn{
     width: 3rem;
     height: 3rem;
@@ -662,7 +674,7 @@ p{
     padding-left: 1rem;
 }
 
-/*game*/
+/*GAME*/
 #game{
     width: 20rem;
     height: 20rem;
@@ -688,7 +700,7 @@ p{
 }
 
 
-/*placar score*/
+/*PLACAR SCORE*/
 
 #placar-score{
     color: white;
@@ -719,7 +731,7 @@ border-radius: 1rem;
 }
 
 
-/*reset button*/
+/*RESET BUTTON*/
 #restart{
 position: relative;
 top: -4rem;
@@ -728,7 +740,7 @@ font-size: 2rem;
 
 }
 
-/*The slider change theme button */
+/*SLIDER CHANGE BUTTON */
 
 p.changeTheme{
     position: relative;

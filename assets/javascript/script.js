@@ -93,12 +93,22 @@ alert(`The winner is: ${winner} !`)
  
 
     
-function sleep(ms){ //start a diferent program process
-    return new Promise(resolve=> setTimeout(resolve, ms));
-}
+    function sleep(ms){ //star a diferent program process
+        return new Promise(resolve=> setTimeout(resolve, ms));
+    }
 
 
 
+/*MODAL RULES*/
+
+    function rulesOnClick(){
+        document.getElementById("rules-bar").classList.toggle("change");  //classList.toggle insert class if it doesn't exist or remove it if it exists
+        document.getElementById("nav").classList.toggle("change");
+      
+    }
+
+
+ 
 /*COLOR THEME*/
 
 function setColor(themeName) {
@@ -109,35 +119,30 @@ function setColor(themeName) {
 function changeTheme() {
    if (localStorage.getItem('theme') === 'second-color'){
        setColor('original-color');
+       
+
    } else {
        setColor('second-color');
    }
-}
+} 
 
 (function () {
    if (localStorage.getItem('theme') === 'second-color') {
        setColor('second-color');
+       
+      
    } else {
        setColor('original-color');
    }
-})();
-
-
-/* desktop MODAL */
-
-//Open modal
-function openModal() {
-    document.getElementById("myModal").style.display = "block"; //change modal display onclick to "block"
-}
-    
-// Close the Modal
-function closeModal() {
-    document.getElementById("myModal").style.display = "none"; //hidde modal display"
 }
 
 
-/*RESTART BUTTON*/
+
+)()
 
 function restart(){
+    window.location.reload();
 
-}
+
+   
+    }
