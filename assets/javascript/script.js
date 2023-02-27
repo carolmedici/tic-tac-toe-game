@@ -1,14 +1,37 @@
-const player1 = "X";
-const player2 = "O";
+/*MODAL RULES*/
+
+function rulesOnClick(){
+    document.getElementById("rules-bar").classList.toggle("change");  //classList.toggle insert class if it doesn't exist or remove it if it exists
+    document.getElementById("nav").classList.toggle("change");
+  
+}
+
+
+const player1 = "Player 1";
+const player2 = "Player 2";
 var playTime = player1;  //player 1 it's always the first player
 var gameOver = false; 
 var winner = "";
+var res1p = 0
+var resTie = 0
+var res2p = 0
+var res1 = document.getElementById('res1')
+var resT = document.getElementById('resT')
+var res2 = document.getElementById('res2')
 
+function setColor(themeName) {
+    localStorage.setItem('theme', themeName);
+    document.documentElement.className = themeName;
+}
+changeTheme() 
 
-updatePlayerTurn(); //call the function
-startSpaces();
+function changeTheme() {
+   if (localStorage.getItem('theme') === 'second-color'){
+       setColor('original-color');
+        updatePlayerTurn(); //call the function
+        startSpaces();
 
-function updatePlayerTurn(){
+    function updatePlayerTurn(){
     if (gameOver == true){
         return;
     }  // if the game it's over, nothing else will be done
@@ -22,10 +45,7 @@ function updatePlayerTurn(){
         player.setAttribute('src', '/assets/images/o.png')
     } 
 }
-
-
-
-function startSpaces(){
+    function startSpaces(){
     let spaces = document.getElementsByClassName("space");
     for (let i = 0; i < spaces.length; i++){
 
@@ -49,7 +69,64 @@ function startSpaces(){
             thereIsAWinner(); //verify if there is a winner
         } );
      }
-    }
+    }} 
+    else {
+
+        setColor('second-color');
+        updatePlayerTurn2()
+        startSpaces2()
+
+        function updatePlayerTurn2(){
+            if (gameOver == true){
+                return;
+            }  // if the game it's over, nothing else will be done
+        
+            if (playTime == player1) { 
+        
+                var player = document.querySelectorAll("div#playerturn img")[0];
+                player.setAttribute("src", "/assets/images/dog.png") //if it's player 1 turn's, var player will search the image of #playerturn  and setAttribute will change "src" to "x image"
+            } else{
+                var player = document.querySelectorAll("div#playerturn img")[0];
+                player.setAttribute('src', '/assets/images/cat.png')
+            } 
+        }
+        function startSpaces2(){
+            let spaces = document.getElementsByClassName("space");
+            for (let i = 0; i < spaces.length; i++){
+        
+            spaces[i].addEventListener("click", function(){
+                if (gameOver == true){
+                    return;
+                } // if the game it's over, nothing else will be done
+        
+                if (this.getElementsByTagName("img").length ==0 ){ //if this space is empty, put an image inside. if it's full, nothing happens
+                    if (playTime == player1){
+                        this.innerHTML = "<img src='/assets/images/dog.png'>";
+                        this.setAttribute("move", player1); 
+                        playTime = player2;
+        
+                    }else{
+                        this.innerHTML = "<img src='/assets/images/cat.png'>";
+                        this.setAttribute("move", player2);
+                        playTime = player1;
+                    }}
+                    updatePlayerTurn2(); //update players turn image
+                    thereIsAWinner(); //verify if there is a winner
+    
+    
+                })
+    
+        
+    }}} 
+    (function () {
+        if (localStorage.getItem('theme') === 'second-color') {
+            setColor('second-color');
+        } else {
+            setColor('original-color');
+        }
+     })();
+        }
+    
 
     async function thereIsAWinner(){
         var space1 = document.getElementById('space1').getAttribute("move") //it's through the attribute "move" that will be determined who is the winner
@@ -78,38 +155,40 @@ function startSpaces(){
 
     winner = space9
         }else if (space1!="" && space2!="" && space3!="" && space4!="" && space5!="" && space6!="" && space7!="" && space8!="" && space9!=""){
-            await sleep(50);
-            alert("It's a tie!")
+           
+            
+            
+            gameOver == true;
+            return;
         }
     }
 
 
-if (winner!=""){
+if (winner == player1){
 gameOver == true;
-await sleep(50) //wait 50ms
-alert(`The winner is: ${winner} !`)
+res1.innerHTML = (res1p + 1)
+
 }
+else if (winner == player2){
+    gameOver == true;
+    res2.innerHTML = (res2p + 1)
+    
+    }else{
+        resT.innerHTML = (resTie + 1)
+    }
 }
  
 
     
-    function sleep(ms){ //star a diferent program process
-        return new Promise(resolve=> setTimeout(resolve, ms));
-    }
+    
 
 
 
-/*MODAL RULES*/
 
-    function rulesOnClick(){
-        document.getElementById("rules-bar").classList.toggle("change");  //classList.toggle insert class if it doesn't exist or remove it if it exists
-        document.getElementById("nav").classList.toggle("change");
-      
-    }
 
 
  
-/*COLOR THEME*/
+/*COLOR THEME
 
 function setColor(themeName) {
     localStorage.setItem('theme', themeName);
@@ -138,11 +217,21 @@ function changeTheme() {
 
 
 
-)()
+)()*/
 
 function restart(){
-    window.location.reload();
+   /* window.location.reload();*/
+   space1.innerHTML = '';
+   space2.innerHTML = '';
+   space3.innerHTML = '';
+   space4.innerHTML = '';
+   space5.innerHTML = '';
+   space6.innerHTML = '';
+   space7.innerHTML = '';
+   space8.innerHTML = '';
+   space9.innerHTML = '';
 
 
+    
    
     }
