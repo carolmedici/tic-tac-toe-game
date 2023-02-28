@@ -31,7 +31,7 @@ function changeTheme() {
     else {
             setColor('second-color');
             updatePlayerTurn2()
-            startSpaces2()
+           
     
             } 
         (function () {
@@ -54,10 +54,10 @@ function changeTheme() {
             if (playTime == player1) { 
         
                 var player = document.querySelectorAll("div#playerturn img")[0];
-                player.setAttribute("src", "/assets/images/x.png") //if it's player 1 turn's, var player will search the image of #playerturn  and setAttribute will change "src" to "x image"
+                player.setAttribute("src", "./assets/images/x.png") //if it's player 1 turn's, var player will search the image of #playerturn  and setAttribute will change "src" to "x image"
             } else{
                 var player = document.querySelectorAll("div#playerturn img")[0];
-                player.setAttribute('src', '/assets/images/o.png')
+                player.setAttribute('src', './assets/images/o.png')
             } 
             startSpaces1(); 
         }
@@ -74,12 +74,12 @@ function changeTheme() {
         
                 else if (this.getElementsByTagName("img").length ==0 ){ //if this space is empty, put an image inside. if it's full, nothing happens
                     if (playTime == player1){
-                        this.innerHTML = "<img src='/assets/images/x.png'>";
+                        this.innerHTML = "<img src='./assets/images/x.png'>";
                         this.setAttribute("move", player1); 
                         playTime = player2;
         
                     }else{
-                        this.innerHTML = "<img src='/assets/images/o.png'>";
+                        this.innerHTML = "<img src='./assets/images/o.png'>";
                         this.setAttribute("move", player2);
                         playTime = player1;
                     }}
@@ -101,11 +101,11 @@ function changeTheme() {
                 if (playTime == player1) { 
             
                     var player = document.querySelectorAll("div#playerturn img")[0];
-                    player.setAttribute("src", "/assets/images/dog.png") //if it's player 1 turn's, var player will search the image of #playerturn  and setAttribute will change "src" to "x image"
+                    player.setAttribute("src", "./assets/images/dog.png") //if it's player 1 turn's, var player will search the image of #playerturn  and setAttribute will change "src" to "x image"
                 } else{
                     var player = document.querySelectorAll("div#playerturn img")[0];
-                    player.setAttribute('src', '/assets/images/cat.png')
-                } 
+                    player.setAttribute('src', './assets/images/cat.png')
+                }  startSpaces2()
             }
             function startSpaces2(){
                 let spaces = document.getElementsByClassName("space");
@@ -118,12 +118,12 @@ function changeTheme() {
             
                     if (this.getElementsByTagName("img").length ==0 ){ //if this space is empty, put an image inside. if it's full, nothing happens
                         if (playTime == player1){
-                            this.innerHTML = "<img src='/assets/images/dog.png'>";
+                            this.innerHTML = "<img src='./assets/images/dog.png'>";
                             this.setAttribute("move", player1); 
                             playTime = player2;
             
                         }else{
-                            this.innerHTML = "<img src='/assets/images/cat.png'>";
+                            this.innerHTML = "<img src='./assets/images/cat.png'>";
                             this.setAttribute("move", player2);
                             playTime = player1;
                         }}
