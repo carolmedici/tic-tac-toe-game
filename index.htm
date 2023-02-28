@@ -51,7 +51,9 @@
        
     <div id="playerturn">
         <p>Player's turn:</p> 
+        
         <img id="img-player-turn" src="" height="8rem">
+        <br><p id="winnerIs">The winner is:</p> <div id="the-winner"></div>
     </div>
 
         <div id="game">
@@ -74,14 +76,14 @@
         </div>
              <p id="placar-score">Placar Score</p>
              <div id="result">
-             <div class="scoreboard" id="winP1">Player 1 win:  <div id="res1" class=""></div> </div>
+             <div class="scoreboard" id="winP1">Player 1:  <div id="res1" class=""></div> </div>
              <div class="scoreboard" id="tie">A tie: <div id="resT"></div></div>
-             <div class="scoreboard" id="winP2">Player 2 win: <div id="res2"></div> </div>
+             <div class="scoreboard" id="winP2">Player 2: <div id="res2"></div> </div>
              </div>
-        
+             <button id="restart" onclick="restart()">Restart</button>
              
             
-             <button id="restart" onclick="restart()">Play again</button>
+             <button id="play-again" onclick="playAgain()">Play again</button>
        
     </main>
     <script type="text/javascript" src="/assets/javascript/script.js"></script>

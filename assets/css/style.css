@@ -53,7 +53,7 @@ main{
     width: 25rem;
     margin: auto;
     margin-top: 2rem;
-    height: 64rem;
+    height: 70rem;
     border-radius: 1rem;
     margin-bottom: 10rem;
     font-family: var(--font-text);
@@ -247,6 +247,13 @@ p{
     left: -4rem;
     
 }
+#winnerIs{
+    position: relative;
+    top: 5rem;
+    left: -7rem;
+    padding-bottom: 1rem;
+
+}
 
 #img-player-turn{
     width: 3rem;
@@ -352,38 +359,48 @@ border-radius: 1rem;
 }
 
 
-.scoreboard{
-    padding-right: 2rem;
-}
 
-#win{
+#winP1{
     position: relative;
     left: -9rem;
+    width: 21rem;
 }
 
-#loose, #tie{
+#winP2, #tie{
     padding-top: 2rem;
     position: relative;
     left: 2rem;
 }
 
 
- #restart{
+ #play-again{
     border-style: none;
     background-color: var(--score-color);
     color: white;
     padding: 1rem;
     border-radius: 5rem;
-    margin-top: 0rem;
     margin-left: 9.5rem;
     font-family: var(--font-text);
     position: relative;
-    top: -9rem;
+    top: -13rem;
     left: -1rem;
+}
+
+#restart{
+    border-style: none;
+    background-color: var(--score-color);
+    color: white;
+    padding: 1rem;
+    border-radius: 5rem;
+    margin-left: 9.5rem;
+    font-family: var(--font-text);
+    position: relative;
+    top: 16rem;
+    left: 0rem;
 }
  
 
- #restart:hover{
+ #play-again:hover{
     background-color: var(--hover-color);
  }
 
@@ -395,7 +412,7 @@ border-radius: 1rem;
 @media (min-width: 38rem){
 
     main{
-        height: 120rem;
+        height: 125rem;
     }
     h1{
         font-size: 6rem;
@@ -468,6 +485,14 @@ border-radius: 1rem;
         left: 0rem;
                 
     }
+
+    #winnerIs{
+        position: relative;
+        top: 5rem;
+        left: -4rem;
+        padding-bottom: 1rem;
+    
+    }
     
     #img-player-turn{
         width: 4rem;
@@ -520,25 +545,26 @@ border-radius: 1rem;
         padding-right: 2rem;
     }
     
-        
-    #loose, #tie, #win{
+   
+    
+    #winP2, #tie, #winP1{
         left: 2rem;
         top: -2.5rem;
     }
     
     
-     #restart{
+     #play-again{
        font-size: 3rem;
        padding: 1rem;
-        top: -8rem;
+        top: -12rem;
         left: -5rem;
         width: 20rem;
         
     }
 
-
-
-
+    #restart{
+        top: 36rem;
+    }
 
 
 }
@@ -663,6 +689,14 @@ p{
     
 }
 
+#winnerIs{
+    position: relative;
+    top: -1rem;
+    left: 5rem;
+    padding-bottom: 1rem;
+
+}
+
 /* IMAGE PLAYER TURN*/
 #img-player-turn{
     width: 3rem;
@@ -679,8 +713,8 @@ p{
     width: 20rem;
     height: 20rem;
     position: relative;
-    top: 0rem;
-    left: 8rem;
+    top: 3rem;
+    left: -8rem;
     
 }
 
@@ -731,13 +765,19 @@ border-radius: 1rem;
 }
 
 
-/*RESET BUTTON*/
-#restart{
+/*PLAY AGAIN BUTTON*/
+#play-again{
 position: relative;
-top: -4rem;
-left:34rem;
+top: -1rem;
+left:20rem;
 font-size: 2rem;
 
+}
+
+
+#restart{
+    top: -20rem;
+    left: 86rem;
 }
 
 /*SLIDER CHANGE BUTTON */
