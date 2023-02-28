@@ -9,38 +9,42 @@ function openModal() {
     document.getElementById("myModal").style.display = "none";  //hide again
     }
 
+   
 
+/*  THE GAME */
 
-
-
-
-    
-const player1 = "Player 1";
+const player1 = "Player 1"; //assign values ​​to players 1 and 2
 const player2 = "Player 2";
+
 var playTime = player1;  //player 1 it's always the first player
 var gameOver = false; 
-var winner = "";
+var winner = ""; //is empty because we don't have a winner yet
   
-var theWinner = document.getElementById('result')
+const theWinner = document.getElementById('result') // assign value to the result, indicating who won the game
 
+
+
+
+/*THEME COLOR */
 function setColor(themeName) {
     localStorage.setItem('theme', themeName);
     document.documentElement.className = themeName;
 }
-changeTheme() 
 
+
+
+changeTheme() 
 function changeTheme() {
+    
    if (localStorage.getItem('theme') === 'second-color'){
        setColor('original-color');
       
-        updatePlayerTurn(); //call the function
-        startSpaces(); 
-newGame()
+        updatePlayerTurn1(); //call the function
+        startSpaces1(); 
 
-function newGame(){ }
-    function updatePlayerTurn(){
+function updatePlayerTurn1(){
     if (gameOver == true){
-        return ;
+        return;
     }  // if the game it's over, nothing else will be done
 
     if (playTime == player1) { 
@@ -52,7 +56,9 @@ function newGame(){ }
         player.setAttribute('src', '/assets/images/o.png')
     } 
 }
-function startSpaces(){
+
+
+function startSpaces1(){
     let spaces = document.getElementsByClassName("space");
     for (let i = 0; i < spaces.length; i++){
 
@@ -61,7 +67,7 @@ function startSpaces(){
             return;
         } // if the game it's over, nothing else will be done
 
-        if (this.getElementsByTagName("img").length ==0 ){ //if this space is empty, put an image inside. if it's full, nothing happens
+        else if (this.getElementsByTagName("img").length ==0 ){ //if this space is empty, put an image inside. if it's full, nothing happens
             if (playTime == player1){
                 this.innerHTML = "<img src='/assets/images/x.png'>";
                 this.setAttribute("move", player1); 
@@ -72,15 +78,12 @@ function startSpaces(){
                 this.setAttribute("move", player2);
                 playTime = player1;
             }}
-            updatePlayerTurn(); //update players turn image
+            updatePlayerTurn1(); //update players turn image
             thereIsAWinner(); //verify if there is a winner
         } );
      }
     }} 
     else {
-
-       
-
             setColor('second-color');
             updatePlayerTurn2()
             startSpaces2()
@@ -135,9 +138,14 @@ function startSpaces(){
             }
          })();}
         
-    
+        
 
-    async function thereIsAWinner(){
+
+
+         /* WINNER */
+
+
+     function thereIsAWinner(){
         var space1 = document.getElementById('space1').getAttribute("move") //it's through the attribute "move" that will be determined who is the winner
         var space2 = document.getElementById("space2").getAttribute("move")
         var space3 = document.getElementById('space3').getAttribute("move")
@@ -150,111 +158,44 @@ function startSpaces(){
         var space8 = document.getElementById('space8').getAttribute("move")
         var space9 = document.getElementById('space9').getAttribute("move")
 
-        if(winner == ""){ //is empty because we don't have a winner yet
+        if(winner == ""){ 
 
-        if((space1 == player1 && space3 == player1 && space2 == player1) || (space1 == player1  && space4 == player1  && space7 ==player1) || (space1 == player1  && space5 == player1  && space9== player1 ) || (space2==player1 && space5==player1 && space8==player1 ) || (space3==player1 && space6==player1 && space9==player1) || (space7==player1 && space8==player1 && space9==player1 )){
+            if((space1 == player1 && space2 == player1 && space3 == player1) || (space1 == player1  && space4 == player1  && space7 ==player1) ||   (space1 == player1  && space5 == player1  && space9== player1 ) || (space2==player1 && space5==player1 && space8==player1 ) || (space3==player1 && space6==player1 && space9==player1) || (space7==player1 && space8==player1 && space9==player1 )){
 
         winner = player1;
-        gameOver == true
-        theWinner.innerHTML = "Player 1";
+        theWinner.textContent = `${winner} wins! 🎉`;
+        theWinner.style.display = "block";
+        gameOver == true;
+        
         return;
         
         
         
-        }else if((space1 == player2 && space3 == player2 && space2 == player2) || (space1 == player2  && space4 == player2  && space7 == player2) || (space1 == player2  && space5 == player2  && space9 == player2 ) || (space2==player2 && space5==player2 && space8==player2 ) || (space3==player2 && space6==player2 && space9==player2) || (space7==player2 && space8==player2 && space9==player2 )){
+            }else if((space1 == player2 && space3 == player2 && space2 == player2) || (space1 == player2  && space4 == player2  && space7 == player2) || (space1 == player2  && space5 == player2  && space9 == player2 ) || (space2==player2 && space5==player2 && space8==player2 ) || (space3==player2 && space6==player2 && space9==player2) || (space7==player2 && space8==player2 && space9==player2 )){
 
             winner = player2;
+            theWinner.textContent = `${winner} wins! 🎉`;
+            theWinner.style.display = "block";
             gameOver == true;
-            theWinner.innerHTML = "Player 2";
             return;
             
                     
-        }else if (space1!="" && space2!="" && space3!="" && space4!="" && space5!="" && space6!="" && space7!="" && space8!="" && space9!=""){
-                     
+            }else if (space1!="" && space2!="" && space3!="" && space4!="" && space5!="" && space6!="" && space7!="" && space8!="" && space9!=""){
+            theWinner.innerHTML = `It's a tie!<br> Nobody wins 😅 `;        
             gameOver == true;
-            theWinner.innerHTML = "It's a tie! <br> Nobody wins";
             return;
            
+             }
         }
-    }
     }
      
     
 
-
-
-
- 
-
-
-    
-
-
-
- 
-/*COLOR THEME
-
-function setColor(themeName) {
-    localStorage.setItem('theme', themeName);
-    document.documentElement.className = themeName;
-}
-
-function changeTheme() {
-   if (localStorage.getItem('theme') === 'second-color'){
-       setColor('original-color');
-       
-
-   } else {
-       setColor('second-color');
-   }
-} 
-
-(function () {
-   if (localStorage.getItem('theme') === 'second-color') {
-       setColor('second-color');
-       
-      
-   } else {
-       setColor('original-color');
-   }
-}
-
-
-
-)()*/
-
-function playAgain(){
-   
-   space1.innerHTML = " ";
-   space2.innerHTML = ' ';
-   space3.innerHTML = ' ';
-   space4.innerHTML = ' ';
-   space5.innerHTML = ' ';
-   space6.innerHTML = ' ';
-   space7.innerHTML = ' ';
-   space8.innerHTML = ' ';
-   space9.innerHTML = ' ';
-  playTime == player1;
-theWinner.innerHTML = "";
-newGame()
-  
-   
-    }
+//RESTART BUTTON    
 
     function restart(){
-          window.location.reload();
-          space1.innerHTML = '';
-          space2.innerHTML = '';
-          space3.innerHTML = '';
-          space4.innerHTML = '';
-          space5.innerHTML = '';
-          space6.innerHTML = '';
-          space7.innerHTML = '';
-          space8.innerHTML = '';
-          space9.innerHTML = '';
-          res1.innerHTML = " ";
-          res2.innerHTML = "";
-          resT.innerHTML ="";
-          playTime = player1;
-          theWinner.innerHTML = ""
+          location.reload();
+          theWinner.style.display = "none";
+         
+         
     }

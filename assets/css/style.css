@@ -32,7 +32,7 @@
     --score-color:#D6A2AD;
     --back-color: #668F80;
     --space-back-color: #4A6670;
-    --the-winner-color:rgba(213, 190, 39, 0.816);
+    --the-winner-color:rgb(94, 113, 187);
 }
 
 
@@ -55,7 +55,7 @@ main{
     width: 25rem;
     margin: auto;
     margin-top: 2rem;
-    height: 70rem;
+    height: 50rem;
     border-radius: 1rem;
     margin-bottom: 10rem;
     font-family: var(--font-text);
@@ -249,28 +249,9 @@ p{
     left: -4rem;
     
 }
-#winnerIs{
-    position: relative;
-    top: 12rem;
-    left: 6rem;
-    padding-bottom: 1rem;
 
-}
 
-/*#the-winner{
-    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.9);
-    color: var(--the-winner-color);
-    font-size: 2rem;
-    font-weight: 600;
-    font-family: var(--font-text);
-    position: relative;  
-    top: 0.4rem;
-    left: 15rem; 
-    width: 10rem;
-    margin: 0;
-    padding: 0;
 
-}*/
 
 #img-player-turn{
     width: 3rem;
@@ -349,60 +330,30 @@ p{
      grid-row-start: 3;
  }
 
+/*WINNER*/
 
-
-        
-/*PLACAR SCORE*/
-
-#placar-score{
-    color: white;
+#winnerIs{
     position: relative;
-    top: 14rem;
+    top: -5rem;
     left: 6rem;
-}
+    padding-bottom: 1rem;
 
+}
 #result{
-    left: 2rem;
-    top: 15rem;
-    font-size: 2rem;
-    background-color: var(--score-color);
-    width: 21rem;
-    height: 3rem;
-padding: 1rem 0;
-border-radius: 1rem;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.455);
-    position: relative;
+   
+    font-size: 3rem;
+    font-weight: 600;
+    text-align: center;
     color: white;
-    margin-bottom: 2rem;
-}
-
-
-
-#winP1{
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.61);
+    margin: 0 auto;
+    top: 6rem;
     position: relative;
-    left: -9rem;
-    width: 21rem;
+    background-color:var(--the-winner-color);
+    margin-bottom: 1rem;
+    border-radius: 2rem;
 }
-
-#winP2, #tie{
-    padding-top: 2rem;
-    position: relative;
-    left: 2rem;
-}
-
-
- #play-again{
-    border-style: none;
-    background-color: var(--score-color);
-    color: white;
-    padding: 1rem;
-    border-radius: 5rem;
-    margin-left: 9.5rem;
-    font-family: var(--font-text);
-    position: relative;
-    top: -4rem;
-    left: -1rem;
-}
+ /*RESTART BUTTON*/
 
 #restart{
     border-style: none;
@@ -413,7 +364,7 @@ border-radius: 1rem;
     margin-left: 9.5rem;
     font-family: var(--font-text);
     position: relative;
-    top: 14rem;
+    top: 6rem;
     left: 0rem;
 }
  
@@ -430,7 +381,7 @@ border-radius: 1rem;
 @media (min-width: 38rem){
 
     main{
-        height: 125rem;
+        height: 100rem;
     }
     h1{
         font-size: 6rem;
@@ -506,14 +457,23 @@ border-radius: 1rem;
 
     #winnerIs{
         position: relative;
-        top: 28rem;
-        left: 2rem;
+        top: 0rem;
+        left: 6rem;
         padding-bottom: 1rem;
     
     }
+    #result{
+       
+        font-size: 4rem;
+        width: 30rem;
+        margin: 0 auto;
+        top: 16rem;
+    }
 
-    
-    
+
+
+    /*PLAYER TURN*/
+
     #img-player-turn{
         width: 4rem;
         height: 4rem;
@@ -544,48 +504,19 @@ border-radius: 1rem;
     padding-top: 2rem;
     }
             
-    /*PLACAR SCORE*/
+  
     
-    #placar-score{
-        color: white;
-        position: relative;
-        top: 30rem;
-        left: 4rem;
-    }
-    
-    #result{
-        left: 2rem;
-        top: 35rem;
-        font-size: 3rem;
-        width: 25rem;
-        height: 6rem;
-    }
-    
-    
-    .scoreboard{
-        padding-right: 2rem;
-    }
     
    
+   
     
-    #winP2, #tie, #winP1{
-        left: 2rem;
-        top: -2.5rem;
-    }
-    
-    
-     #play-again{
-       font-size: 3rem;
-       padding: 1rem;
-        top: 3rem;
-        left: -5rem;
-        width: 20rem;
-        
-    }
+  /*RESTART BUTTON */
 
     #restart{
-        top: 36rem;
-        left: 2rem;
+        top: 19rem;
+        left: -2rem;
+        padding: 2rem;
+        font-size: 3rem;
     }
 
 
@@ -711,6 +642,8 @@ p{
     
 }
 
+
+/*WINNER*/
 #winnerIs{
     position: relative;
     top: -25rem;
@@ -720,6 +653,14 @@ p{
 }
 
 
+#result{
+    top: -18rem;
+    left: 46rem;
+    
+          
+    }
+        
+    
 
 /* IMAGE PLAYER TURN*/
 #img-player-turn{
@@ -758,47 +699,13 @@ p{
 }
 
 
-/*PLACAR SCORE*/
 
-#placar-score{
-    color: white;
-    position: relative;
-    top: -25.5rem;
-    left: 89rem;
-}
-
-#result{
-left: 85rem;
-top: -19rem;
-font-size: 2rem;
-background-color: var(--score-color);
-width: 27rem;
-padding-top: 4rem;
-border-radius: 1rem;
-
-}
-
-
-.scoreboard{
-    padding-right: 2rem;
-}
-
-
-
-
-/*PLAY AGAIN BUTTON*/
-#play-again{
-position: relative;
-top: 3rem;
-left:18rem;
-font-size: 2rem;
-
-}
+/*RESTART BUTTON*/
 
 
 #restart{
-    top: -20rem;
-    left: 86rem;
+    top: -15rem;
+    left: 85rem;
 }
 
 /*SLIDER CHANGE BUTTON */
