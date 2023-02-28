@@ -1,26 +1,27 @@
 /*MODAL RULES*/
 
-function rulesOnClick(){
-    document.getElementById("rules-bar").classList.toggle("change");  //classList.toggle insert class if it doesn't exist or remove it if it exists
-    document.getElementById("nav").classList.toggle("change");
-  
-}
+function openModal() {
+    document.getElementById("myModal").style.display = "block";   //change the original "display none" to "block"
+    }
+    
+    // Close the Modal
+    function closeModal() {
+    document.getElementById("myModal").style.display = "none";  //hide again
+    }
 
 
+
+
+
+
+    
 const player1 = "Player 1";
 const player2 = "Player 2";
 var playTime = player1;  //player 1 it's always the first player
 var gameOver = false; 
 var winner = "";
   
-var res1p = 0;
-var resTie = 0;
-var res2p = 0;
-var res1 = document.getElementById('res1')
-var resT = document.getElementById('resT')
-var res2 = document.getElementById('res2')
-
-var theWinner = document.getElementById('the-winner')
+var theWinner = document.getElementById('result')
 
 function setColor(themeName) {
     localStorage.setItem('theme', themeName);
@@ -34,7 +35,9 @@ function changeTheme() {
       
         updatePlayerTurn(); //call the function
         startSpaces(); 
+newGame()
 
+function newGame(){ }
     function updatePlayerTurn(){
     if (gameOver == true){
         return ;
@@ -130,7 +133,7 @@ function startSpaces(){
             } else {
                 setColor('original-color');
             }
-         })();
+         })();}
         
     
 
@@ -152,32 +155,32 @@ function startSpaces(){
         if((space1 == player1 && space3 == player1 && space2 == player1) || (space1 == player1  && space4 == player1  && space7 ==player1) || (space1 == player1  && space5 == player1  && space9== player1 ) || (space2==player1 && space5==player1 && space8==player1 ) || (space3==player1 && space6==player1 && space9==player1) || (space7==player1 && space8==player1 && space9==player1 )){
 
         winner = player1;
-        gameOver = true
-        res1.innerHTML = res1p++;
+        gameOver == true
         theWinner.innerHTML = "Player 1";
-        playTime = player1;
+        return;
         
         
-        }else if((space1 == player2 && space3 == player2 && space2 == player2) || (space1 == player2  && space4 == player2  && space7 ==player2) || (space1 == player2  && space5 == player2  && space9== player2 ) || (space2==player2 && space5==player2 && space8==player2 ) || (space3==player2 && space6==player2 && space9==player2) || (space7==player2 && space8==player2 && space9==player2 )){
+        
+        }else if((space1 == player2 && space3 == player2 && space2 == player2) || (space1 == player2  && space4 == player2  && space7 == player2) || (space1 == player2  && space5 == player2  && space9 == player2 ) || (space2==player2 && space5==player2 && space8==player2 ) || (space3==player2 && space6==player2 && space9==player2) || (space7==player2 && space8==player2 && space9==player2 )){
 
             winner = player2;
-            gameOver = true;
-            res2.innerHTML = res2p++;
+            gameOver == true;
             theWinner.innerHTML = "Player 2";
-            playTime = player1;
+            return;
+            
                     
         }else if (space1!="" && space2!="" && space3!="" && space4!="" && space5!="" && space6!="" && space7!="" && space8!="" && space9!=""){
                      
             gameOver == true;
-            theWinner.innerHTML = "It's a tie! Nobody wins :)";
-            resT.innerHTML = resTie++
+            theWinner.innerHTML = "It's a tie! <br> Nobody wins";
+            return;
            
         }
     }
     }
      
     
-}
+
 
 
 
@@ -221,17 +224,19 @@ function changeTheme() {
 )()*/
 
 function playAgain(){
-   /* window.location.reload();*/
-   space1.innerHTML = '';
-   space2.innerHTML = '';
-   space3.innerHTML = '';
-   space4.innerHTML = '';
-   space5.innerHTML = '';
-   space6.innerHTML = '';
-   space7.innerHTML = '';
-   space8.innerHTML = '';
-   space9.innerHTML = '';
-playTime == player1;
+   
+   space1.innerHTML = " ";
+   space2.innerHTML = ' ';
+   space3.innerHTML = ' ';
+   space4.innerHTML = ' ';
+   space5.innerHTML = ' ';
+   space6.innerHTML = ' ';
+   space7.innerHTML = ' ';
+   space8.innerHTML = ' ';
+   space9.innerHTML = ' ';
+  playTime == player1;
+theWinner.innerHTML = "";
+newGame()
   
    
     }
@@ -251,4 +256,5 @@ playTime == player1;
           res2.innerHTML = "";
           resT.innerHTML ="";
           playTime = player1;
+          theWinner.innerHTML = ""
     }
