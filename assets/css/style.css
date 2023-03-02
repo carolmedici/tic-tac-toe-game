@@ -291,6 +291,9 @@ p{
     padding-top: 1rem;
    
 }
+.space:hover{
+    opacity: 0.8;
+}
 
 #space1{
     grid-column-start: 1;
