@@ -9,7 +9,7 @@ function openModal() {
     document.getElementById("myModal").style.display = "none";  //hide again
     }
 
-   
+    changeTheme() 
 
 
 
@@ -67,6 +67,7 @@ function openModal() {
     function restart(){
           location.reload();
           theWinner.style.display = "none";
+
          
          
     }

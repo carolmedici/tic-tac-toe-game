@@ -91,7 +91,7 @@ function changeTheme() {
 
 
 
-        /*PLAYER TWO */   
+        /*THEME TWO */   
 
         function updatePlayerTurn2(){
                 if (gameOver == true){
